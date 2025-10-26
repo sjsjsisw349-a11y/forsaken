@@ -1,8 +1,8 @@
 local e0=game:GetService("Players")local e1=e0.LocalPlayer 
-local e2=180 local e3=os.time()local e4=true local e5=false
+local e2=200 local e3=os.time()local e4=true local e5=false
 -- 添加模式变量
-local e11 = "killer" -- killer:180秒, survivor:105秒
-local e12 = 180 -- 当前模式时间
+local e11 = "killer" -- killer:200秒, survivor:120秒
+local e12 = 200 -- 当前模式时间
 
 local e6=Instance.new("ScreenGui")e6.ResetOnSpawn=false e6.IgnoreGuiInset=true
 local e7=Instance.new("TextLabel")e7.Size=UDim2.new(0,200,0,50)e7.Position=UDim2.new(0.5,-100,0.1,0)e7.BackgroundColor3=Color3.fromRGB(150,0,0)e7.TextColor3=Color3.fromRGB(255,255,255)e7.TextScaled=true e7.Visible=true e7.Text="杀手模式: "..e2.."秒"e7.Parent=e6
@@ -25,14 +25,14 @@ e1.CharacterAdded:Connect(function(ec)if e4 then ea=ec eb=ea:WaitForChild('Human
 e13.MouseButton1Click:Connect(function()
     if e11 == "killer" then
         e11 = "survivor"
-        e2 = 105
+        e2 = 120
         e13.Text = "切换到杀手"
         e13.BackgroundColor3 = Color3.fromRGB(150,0,0)
         e7.BackgroundColor3 = Color3.fromRGB(0,100,0)
         e7.Text = "幸存者模式: "..e2.."秒"
     else
         e11 = "killer"
-        e2 = 180
+        e2 = 200
         e13.Text = "切换到幸存者"
         e13.BackgroundColor3 = Color3.fromRGB(0,0,150)
         e7.BackgroundColor3 = Color3.fromRGB(150,0,0)
